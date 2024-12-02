@@ -36,6 +36,9 @@ SELECT name FROM tb_clients ORDER BY name DESC;
    É geralmente usado em conjunto com funções de agregação, como SUM, COUNT, AVG, etc. */
 SELECT categoria, COUNT(*) FROM produtos GROUP BY categoria;
 
+-- EXEMPLO 2
+SELECT barcode, SUM(price) AS 'Valor dos Produtos' FROM tb_products GROUP BY barcode;
+
 /* --------------------------------------------*/
 
 /* 7. Filtrar Grupos com HAVING */
@@ -44,6 +47,13 @@ SELECT categoria, COUNT(*) FROM produtos GROUP BY categoria;
 SELECT categoria, COUNT(*) FROM produtos 
 GROUP BY categoria 
 HAVING COUNT(*) > 10;
+
+-- EXEMPLO 2
+SELECT barcode, 
+SUM(price) AS 'Valor dos Produtos' 
+FROM tb_products 
+GROUP BY barcode
+HAVING SUM(price) > 10.99;
 
 /* --------------------------------------------*/
 
