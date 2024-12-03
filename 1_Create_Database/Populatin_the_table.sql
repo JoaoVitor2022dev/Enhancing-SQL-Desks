@@ -42,3 +42,25 @@ INSERT INTO tb_products ( barcode, description, price, stock_qty, supplier_id) V
 ('Produto H', '2233445566778', 22.10, 10, 3),
 ('Produto I', '6677889900112', 7.50, 80, 3),
 ('Produto J', '1100223344556', 30.00, 40, 3);    
+
+
+
+SELECT 
+   /* pesquisa e modificando o titulo das colunas */
+    tb_sales.id AS 'Código',
+    tb_sales.sale_date AS 'Data da venda',
+    tb_clients.name AS 'Cliente',
+    tb_sales.total_sale AS 'Total',
+    tb_sales.notes AS 'Descrição'
+FROM 
+    /* Selecione a tabela*/
+    tb_sales 
+JOIN 
+    /* Unindo tabelas */
+    tb_clients 
+ON 
+    /* relacionamento entre eles */
+    tb_sales.client_id = tb_clients.id
+WHERE 
+    /* parametro para o filtro */ 
+    tb_sales.sale_date BETWEEN '2024-11-26 00:00:00' AND '2024-11-28 00:00:00';
