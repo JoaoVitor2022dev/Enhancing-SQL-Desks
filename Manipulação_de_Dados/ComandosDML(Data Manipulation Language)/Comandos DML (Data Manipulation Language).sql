@@ -10,5 +10,6 @@ INSERT INTO tb_products
    VALUES 
    ("Ventilador", "9018273981273", 98.90, 34, 2); 
 
+ 
    
 
