@@ -95,3 +95,10 @@ CREATE TABLE Produtos (
 
 -----------------------------------------------------------------------------------------------------------
 
+
+Constraint	Função	Aceita valores nulos?
+PRIMARY KEY	Identifica unicamente cada registro	Não
+FOREIGN KEY	Relaciona tabelas e mantém integridade referencial	Depende da tabela referenciada
+UNIQUE	Garante valores únicos em uma coluna	Sim (em alguns casos)
+NOT NULL	Proíbe valores nulos	Não
+CHECK	Restringe valores com base em uma condição	Sim (se não violar a condição)
