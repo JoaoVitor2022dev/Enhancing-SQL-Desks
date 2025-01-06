@@ -78,3 +78,7 @@ Uso Prático e Considerações
 Cuidado com índices em excesso: Eles podem reduzir a performance de operações de escrita (inserção, atualização e exclusão).
 
 Recomenda-se analisar o plano de execução para identificar as consultas que se beneficiam de índices.
+
+
+
+
